@@ -52,12 +52,6 @@ header .container {
     opacity: 0.8;
 }
 
-.logo-img {
-    height: 160px;
-    width: auto;
-    margin-right: 10px;
-}
-
 .logo-text {    
     font-size: 2rem;
     font-weight: 700;
@@ -507,6 +501,27 @@ footer h3 {
     transform: translateY(0);
 }
 
+#Funny-Logo {
+  border-radius: 10px;
+  cursor: pointer;
+  height: 110px;          /* начальная высота */
+  width: auto;
+  margin-right: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* плавность */
+  display: inline-block;  /* важно для transform */
+  vertical-align: middle; /* выравнивание, если рядом текст */
+}
+
+#Funny-Logo:hover {
+  transform: scale(1.4545); /* 160 / 110 ≈ 1.4545 */
+  opacity: 1;
+}
+
+/* Если нужно начальное затемнение (как в вашем keyframes), добавьте: */
+#Funny-Logo {
+  opacity: 0.2;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-content {
@@ -523,4 +538,55 @@ footer h3 {
         min-width: 180px;
         padding: 0.9rem 1.5rem;
     }
+}
+
+
+/* Minimal form inside welcome-section */
+.welcome-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.welcome-section label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+.welcome-section input[type="text"],
+.welcome-section textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: white;
+}
+.welcome-section .form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+.welcome-section input[type="submit"],
+.welcome-section input[type="reset"] {
+    padding: 0.7rem 1.6rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.welcome-section input[type="submit"] {
+    background: #3498db;
+    color: white;
+}
+.welcome-section input[type="submit"]:hover {
+    background: #2980b9;
+}
+.welcome-section input[type="reset"] {
+    background: #ecf0f1;
+    color: #7f8c8d;
+}
+.welcome-section input[type="reset"]:hover {
+    background: #d5dbdb;
 }

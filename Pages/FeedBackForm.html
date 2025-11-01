@@ -3,24 +3,39 @@
 <head>
 <meta charset="utf-8">
 <title>Rhytis Feedback</title>
+<link rel="stylesheet" href="../Styles/style.css">
 </head>
 <body>
-    <form action="../index.html" method="get">
-        <table>
-            <th>Задать вопрос</th>
-            <tr>
-                <td>Ваше имя</td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td>Ваш вопрос</td>
-                <td><textarea rows="5" cols="40"></textarea></td>
-            </tr>
-            <tr>
-                <td><input type="submit"></td>
-                <td><input type="reset"></td>
-            </tr>
-        </table>
-    </form>
+<header>
+  <div class="container">
+    <div class="header-left">
+      <a href="../index.html" class="logo-link">
+        <img id="Funny-Logo" src="../Sources/logo.png" alt="Rhytis Logo">
+        <span class="logo-text">Rhytis</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <!-- Оборачиваем форму в welcome-section — она уже стилизована! -->
+    <div class="welcome-section">
+      <h2>Задать вопрос</h2>
+      <form action="../index.html" method="get" class="feedback-form">
+        <label>Ваше имя</label>
+        <input type="text" name="name" required>
+
+        <label>Ваш вопрос</label>
+        <textarea rows="5" name="question" required></textarea>
+
+        <div class="form-actions">
+          <input type="submit" value="Отправить">
+          <input type="reset" value="Очистить">
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
 </body>
 </html>
