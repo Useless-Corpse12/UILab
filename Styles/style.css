@@ -590,3 +590,173 @@ footer h3 {
 .welcome-section input[type="reset"]:hover {
     background: #d5dbdb;
 }
+
+/* =============== Pure CSS Mobile Menu (No JS) =============== */
+.mobile-menu-toggle {
+    display: none;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+    line-height: 1;
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2c3e50;
+    z-index: 2000;
+    padding: 4.5rem 0 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+@media (max-width: 992px) {
+    .main-nav {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+/* Активация через checkbox */
+.mobile-menu-toggle:checked ~ .mobile-menu-btn::after {
+    content: '✕';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile-menu-toggle:checked ~ .mobile-nav {
+    display: flex;
+}
+
+/* Стили для пунктов меню в мобильной версии */
+.mobile-nav .nav-link {
+    padding: 0.8rem 1.5rem;
+    min-width: auto;
+    font-size: 1.1rem;
+    white-space: normal;
+    text-align: center;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.mobile-nav .nav-link:hover {
+    background: #3498db;
+}
+.mobile-close-btn {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    background: rgba(0,0,0,0.1);
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+.mobile-close-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+.welcome-section {
+        padding: 1.5rem;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .feedback-form label {
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin-top: 1rem;
+        display: block;
+    }
+
+    .feedback-form input[type="text"],
+    .feedback-form textarea {
+        padding: 0.8rem;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+
+    .feedback-form textarea {
+        min-height: 120px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .form-actions input[type="submit"],
+    .form-actions input[type="reset"] {
+        padding: 0.8rem;
+        font-size: 1.05rem;
+        width: 100%;
+    }
+
+    header .container {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .logo-text {
+        font-size: 1.6rem;
+    }
+
+    #Funny-Logo {
+        height: 80px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-section {
+        padding: 1rem;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .feedback-form label {
+        font-size: 1rem;
+        margin-top: 0.8rem;
+    }
+
+    .feedback-form input[type="text"],
+    .feedback-form textarea {
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
+
+    .logo-text {
+        font-size: 1.4rem;
+    }
+
+    #Funny-Logo {
+        height: 70px;
+    }
+}
