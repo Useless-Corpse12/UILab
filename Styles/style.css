@@ -678,3 +678,8 @@ footer h3 {
         background: rgba(255,255,255,0.2);
     }
 }
+@media (max-width: 768px) {
+    .header-right {
+        display: none !important;
+    }
+}
